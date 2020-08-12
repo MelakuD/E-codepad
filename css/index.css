@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html,body{
+	width: 100%;
+	height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+	background-color: rgb(197, 197, 197);
+    scroll-behavior: smooth;
+}
+.navbar{
+	padding: 0.5rem;
+}
+.navbar-nav li{
+    padding-right: 15px;
+}
+.nav-link:hover::first-letter{
+	border-bottom: chocolate 2px solid;
+}
+.banner ul li a{
+    color: rgb(4, 23, 58);
+}
+.carousel-inner .carousel-item img{
+    height: 75vh;
+    width: 100%;
+}
+.carousel-caption{
+    position: absolute;
+    top: 70%;
+    transform: translateY(-70%);
+}
+.carousel-caption h1{
+    font-size: 300%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 15px #000;
+}
+.carousel-caption button{
+	border: none;
+	padding: 0.4rem 1rem;
+	border-radius: 15px;
+	background-color: rgb(56, 56, 141);
+	color: white;
+}
+.carousel-caption button:hover{
+	background-color: blue;
+}
+.fa-arrow-circle-left, .fa-arrow-circle-right{
+    font-size: 2rem;
+    color: black;
+}
+.my-4{
+	width: 90%;
+	height: 2px;
+	background-color: black;
+}
+.padding{
+    padding-top: 3rem;
+}
+.learn, .welpara{
+    color: black;
+}
+.philo h3{
+	padding-bottom: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.philo img{
+	width: 100%;
+	height: 100%;
+}
+.philopara, .cours{
+    color: black;
+}
+.black{
+    color: black;
+}
+.cards{
+    position: relative;
+    margin: 1rem;
+    width: 170px;
+    height: 120px;
+}
+.cards::before,
+.cards::after{
+    content: '';
+    position: absolute;
+    opacity: 1;
+    transition: transform ease-out 250ms;
+
+}
+.cards::before{
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    border-top: 3px solid black;
+    transform: scale(0,1);
+    transform-origin: left;
+}
+.cards::after{
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    border-top: 3px solid black;
+    transform: scale(0,1);
+    transform-origin: right;
+}
+.cards:hover::before, .cards:hover::after{
+    transform: scale(1,1);
+}
+.card-img-top{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: opacity ease-out 250ms;
+}
+.cards:hover .card-img-top{
+    opacity: .7;
+}
+.bodies{
+    position: absolute;
+    padding: 0 1rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity ease-out 250ms;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.bodies a{
+    color: blue;
+}
+.cards:hover .bodies{
+    opacity: 1;
+}
+.fa-code{
+	color: rgb(158, 74, 14);
+	font-size: 4rem;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-css3{
+	color: blue;
+	font-size: 4rem;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-bold{
+	color: rgb(73, 11, 155);
+	font-size: 4rem;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-js{
+	color: rgb(220, 243, 9);
+	font-size: 4rem;
+	background-color: black;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-java{
+	color: rgb(219, 11, 11);
+	font-size: 4rem;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-python{
+	color: rgb(133, 127, 45);
+	font-size: 4rem;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-php{
+	color: rgb(7, 17, 165);
+	font-size: 4rem;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-gem{
+	color: rgb(219, 11, 11);
+	font-size: 4rem;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-plus{
+    color: blue;
+    font-size: 1rem;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-cuttlefish{
+	color: rgb(6, 4, 105);
+	font-size: 4rem;
+	text-shadow: 0px 0px 5px white;
+}
+.showed i{
+    color: black;
+    font-size: 3rem;
+}
+.showed h4{
+    color: black;
+}
+.showed p{
+    color: black;
+}
+
+
+footer{
+    background-color: #181818;
+}
+footer h5, p{
+    color: blanchedalmond;
+}
+.fa-facebook, .fa-twitter, .fa-instagram,
+.fa-youtube, .fa-telegram{
+    color: gray;
+    padding-right: 1rem;
+    font-size: 25px;
+}
+.fa-facebook:hover{
+	color: rgb(33, 33, 119);
+	text-shadow: 0px 0px 5px white;
+}
+.fa-youtube:hover{
+	color: red;
+	text-shadow: 0px 0px 5px white;
+}
+.fa-twitter:hover{
+	color: rgb(39, 89, 226);
+	text-shadow: 0px 0px 5px white;
+}
+.fa-telegram:hover{
+	color: rgb(10, 69, 92);
+	text-shadow: 0px 0px 5px white;
+}
+.fa-instagram:hover{
+	color: brown;
+	text-shadow: 0px 0px 5px white;
+}
+
+@media(max-width:992px){
+	.navbar-nav li{
+		padding-bottom: 5px;
+	}
+	.card-body h1{
+		font-size: 1.1rem !important;
+		font-weight: bold;
+    }
+    .fa-search{
+        font-size: 10px;
+    }
+}
+@media(max-width:768px){
+	.carousel-caption h1{
+		font-size: 200%;
+		text-transform: uppercase;
+		text-shadow: 0px 0px 15px #000;
+	}
+	.carousel-caption button{
+		padding: 0.3rem 0.8rem;
+		border-radius: 13px;
+	}
+	.learn{
+		font-size: 300%;
+	}
+	.card{
+		margin-bottom: 12px;
+    }
+    .input-group{
+        margin-right: 10px;
+    }
+    .input-group input{
+        width: 25px;
+        height: 10px;
+    }
+    .fa-search{
+        font-size: 5px;
+    }
+    .input-group button{
+        width: 5px;
+        height: 10px;
+    }
+}
+@media(max-width:576px){
+	.container-fluid .row ul li{
+		padding: 0 0.4rem;
+		font-weight: none;
+	}
+	.card{
+		margin-bottom: 12px;
+	}
+	.fa-code, .fa-js, .fa-gem, .fa-python,
+	.fa-java, .fa-plus, .fa-css3, .fa-php,
+	.fa-cuttlefish, .learn, .fa-bold{
+		font-size: 2rem;
+    }
+    .fa-facebook, .fa-twitter, .fa-instagram,
+    .fa-youtube, .fa-telegram{
+        font-size: 18px;
+    }
+	.card-body h1{
+		font-size: 20px;
+	}
+	.card-body p{
+		font-size: 18px;
+	}
+	.carousel-caption h1{
+		font-size: 100%;
+		text-transform: uppercase;
+		text-shadow: 0px 0px 15px #000;
+	}
+	.carousel-caption button{
+		padding: 0.3rem 0.6rem;
+		border-radius: 13px;
+    }
+    .input-group{
+        margin-right: 10px;
+    }
+    .input-group input{
+        width: 25px;
+        height: 10px;
+    }
+    .fa-search{
+        font-size: 5px;
+    }
+    .input-group button{
+        width: 5px;
+        height: 10px;
+    }
+}

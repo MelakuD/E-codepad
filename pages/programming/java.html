@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--font awesome icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!--custom css-->
+    <link rel="stylesheet" href="../../css/program/java.css">
+    <!--logo-->
+    <link rel="icon" href="../../images/logo/logo.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="../../index.html"><img src="../../images/logo/logos.png" alt="" class="img-fluid"></a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#menubar" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="menubar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+					<li class="nav-item active">
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropmenu">
+								Tutorials
+							</button>
+							<div class="dropdown-menu" data-target="#dropmenu">
+								<a class="dropdown-item" href="../programming.html#html">HTML</a>
+								<a class="dropdown-item" href="../programming.html#css">CSS</a>
+								<a class="dropdown-item" href="../programming.html#js">JAVASCRIPT</a>
+								<a class="dropdown-item" href="../programming.html#python">PYTHON</a>
+								<a class="dropdown-item" href="java.html">JAVA</a>
+                                <a class="dropdown-item" href="../programming.html#cpp">C++</a>
+                                <a class="dropdown-item" href="../programming.html#php">PHP</a>
+                                <a class="dropdown-item" href="../programming.html#ruby">RUBY</a>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../../files/JavaIntro-notes.pdf" download="JavaIntro-notes.pdf">Download<i class="far fa-file"></i></a></li>
+				</ul>
+			</div>
+		</div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>JAVA</h1>
+			</div>
+			<div class="col-xs-12 col-sm-2">
+				<nav class="nav flex-column nav-tabs">
+					<a class="nav-link active" href="#introduction" data-toggle="tab">Introduction</a>
+					<a class="nav-link" href="#Flow-control" data-toggle="tab">Flow control</a>
+					<a class="nav-link" href="#methods" data-toggle="tab">Methods</a>
+					<a class="nav-link" href="#Array-String" data-toggle="tab">Array & String</a>
+					<a class="nav-link" href="#Object-class" data-toggle="tab">Object & class</a>
+				</nav>
+			</div>
+			<div class="col-xs-12 col-sm-10">
+				<div class="tab-content">
+					<div class="tab-pane active pr-4" id="introduction">
+						<h4>Introduction</h4>
+						<p>
+							Java is a modern, evolutionary computing language that combines an elegant
+							language design with powerful features that were previously available primarily in
+							specialty languages. In addition to the core language components, Java software
+							distributions include many powerful, supporting software libraries for tasks such
+							as database, network, and graphical user interface (GUI) programming. In this
+							section, we focus on the core Java language features.<br/>
+							Java is a true object-oriented (OO) programming language. The main implication of
+							this statement is that in order to write programs with Java, you must work within
+							its object-oriented structure.<br/>
+							Object-oriented languages provide a framework for designing programs that
+							represent real-world entities such as cars, employees, insurance policies, and so
+							on. Representing real-world entities with nonobject-oriented languages is difficult
+							because it's necessary to describe entities such as a truck with rather primitive
+							language constructs such as Pascal's record, C's struct, and others that represent
+							data only.<br/>
+							The behavior of an entity must be handled separately with language constructs
+							such as procedures and/or functions, hence, the term procedural programming
+							languages. Given this separation, the programmer must manually associate a data
+							structure with the appropriate procedures that operate on, that is, manipulate, the
+							data.
+						</p>
+						
+					</div>
+					<div class="tab-pane" id="Flow-control">
+						<h2>java if, if...else and Nested if...else</h2>
+						<p>In this article, you will learn to create decision making statements in a java program using different forms of if..else statement.
+							There are three forms of if...else statements in java.
+							<pre>
+							1. if statement
+								if(condition){
+									statement;
+								}
+							2. if...else statement
+								if(condition){
+										statement;
+									}
+								else{
+									statement;
+								}
+							3. if...else if...else statement
+								if(condition){
+										statement;
+									}
+								else if{
+									statement;
+								}
+								else{
+									statement;
+								}
+							</pre>
+						</p>
+						<h4>java Loop</h4>
+						<p>
+							In computer programming, loops are used to repeat a block of code.
+							For example, let's say we want to show a message 100 times. Then instead of writing the print statement 100 times, we can use a loop.
+							That was just a simple example; we can achieve much more efficiency and sophistication in our programs by making effective use of loops.
+							There are 3 types of loops in java.
+							<pre>
+							for loop
+								for(initialization; condition; update){
+									statement;
+								}
+							while loop
+								initialization
+								while(condition){
+									statement;
+									update;
+								}
+							do...while loop
+								initialization
+								do{
+									statement
+									update
+								}while(condition);
+							</pre>
+						</p>
+					</div>
+					<div class="tab-pane" id="methods">
+						<p>A method is the object-oriented equivalent of a procedure in nonobject-oriented
+							languages. That is, a method is a program construct that provides the mechanism
+							(method) for performing some act, in this case, barking. Given an instance of some
+							entity, we invoke behavior with a dot syntax that associates an instance with a
+							method in the class definition:<br/>
+							<pre>
+								Method Invocation Syntax
+								<instance>.<behavior>()
+								<variable> = <instance>.<behavior>(<arguments>...)
+							</pre>
+						</p>
+					</div>
+					<div class="tab-pane" id="Array-String">
+						<p>
+							Java provides several classes for managing sets or collections of data, for example,
+							Vector (see java.util.Vector). And, of course, you can design your own
+							classes.
+							In addition, Java supports arrays. A Java array is different from a user-defined
+							container object such as a Vector instance in the sense that Java provides built-in,
+							language-level syntactic support for arrays, as do many other languages. Although
+							language-level support for arrays increases the complexity of the language
+							definition, it's justified (in the minds of most programmers) because array usage is
+							entrenched in traditional programming.
+							An array is a linear collection of data elements, each element directly accessible via
+							its index. The first element has index 0; the last element has index n - 1. It has the
+							form:
+						</p>
+					</div>
+					<div class="tab-pane" id="Object-class">
+						<h2>classes and object</h2>
+						<p>
+							<h4>classes in Java</h4>
+							A class can be defined as a template/blueprint that describes the behavior/state that the object of its type support.
+							A class can contain any of the following variable types.<br/>
+							<b>Local variables</b> − Variables defined inside methods, constructors or blocks are called local variables. The variable will be declared and initialized within the method and the variable will be destroyed when the method has completed.
+							<br/><b>Instance variables</b> − Instance variables are variables within a class but outside any method. These variables are initialized when the class is instantiated. Instance variables can be accessed from inside any method, constructor or blocks of that particular class.
+							<br/><b>Class variables</b> − Class variables are variables declared within a class, outside any method, with the static keyword.
+							A class can have any number of <a href="#methods" data-toggle="tab">methods</a> to access the value of various kinds of methods. In the above example, barking(), hungry() and sleeping() are methods.
+							Following are some of the important topics that need to be discussed when looking into classes of the Java Language.
+						</p>
+						<p>
+							<h4>Objects in Java</h4>
+							Let us now look deep into what are objects. If we consider the real-world, we can find many objects around us, cars, dogs, humans, etc. All these objects have a state and a behavior.
+							If we consider a dog, then its state is - name, breed, color, and the behavior is - barking, wagging the tail, running.
+							If you compare the software object with a real-world object, they have very similar characteristics.
+							Software objects also have a state and a behavior. A software object's state is stored in fields and behavior is shown via methods.
+							So in software development, methods operate on the internal state of an object and the object-to-object communication is done via methods.
+						</p>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

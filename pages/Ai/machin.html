@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>machine lear</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--font awesome icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!--custom css-->
+    <link rel="stylesheet" href="../../css/about.css">
+    <!--logo-->
+    <link rel="icon" href="../images/logo/logo.png">
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="../../index.html"><img src="../../images/logo/logos.png" alt="" class="img-fluid"></a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#menubar" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="menubar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+					<li class="nav-item active">
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropmenu">
+								Tutorials
+							</button>
+							<div class="dropdown-menu" data-target="#dropmenu">
+								<a class="dropdown-item" href="../ai.html#computer">Computer Vision</a>
+								<a class="dropdown-item" href="machin.html">Machine learning</a>
+								<a class="dropdown-item" href="../ai.html#deep">deep learning</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+    </nav>
+    <!--body-->
+    <div class="container-fluid padding pt-5">
+        <div class="row padding">
+            <div class="col-12">
+                <h1>Introduction Machine Learning</h1>
+                <p>
+                    <h3>introduction</h3>
+                    Machine learning is a subfield of artificial intelligence (AI). The goal of machine learning generally is to understand the structure of data and fit that data into models that can be understood and utilized by people.
+                    Although machine learning is a field within computer science, it differs from traditional computational approaches. In traditional computing, algorithms are sets of explicitly programmed instructions used by computers to calculate or problem solve. Machine learning algorithms instead allow for computers to train on data inputs and use statistical analysis in order to output values that fall within a specific range. Because of this, machine learning facilitates computers in building models from sample data in order to automate decision-making processes based on data inputs.
+                    Any technology user today has benefitted from machine learning. Facial recognition technology allows social media platforms to help users tag and share photos of friends. Optical character recognition (OCR) technology converts images of text into movable type. Recommendation engines, powered by machine learning, suggest what movies or television shows to watch next based on user preferences. Self-driving cars that rely on machine learning to navigate may soon be available to consumers.
+                    Machine learning is a continuously developing field. Because of this, there are some considerations to keep in mind as you work with machine learning methodologies, or analyze the impact of machine learning processes.
+                    In this tutorial, we’ll look into the common machine learning methods of supervised and unsupervised learning, and common algorithmic approaches in machine learning, including the k-nearest neighbor algorithm, decision tree learning, and deep learning. We’ll explore which programming languages are most used in machine learning, providing you with some of the positive and negative attributes of each. Additionally, we’ll discuss biases that are perpetuated by machine learning algorithms, and consider what can be kept in mind to prevent these biases when building algorithms.
+                    <h3>Machine Learning Methods</h3>
+                    In machine learning, tasks are generally classified into broad categories. These categories are based on how learning is received or how feedback on the learning is given to the system developed.
+                    Two of the most widely adopted machine learning methods are supervised learning which trains algorithms based on example input and output data that is labeled by humans, and unsupervised learning which provides the algorithm with no labeled data in order to allow it to find structure within its input data. Let’s explore these methods in more detail.
+
+                    <h3>Supervised Learning</h3>
+                    In supervised learning, the computer is provided with example inputs that are labeled with their desired outputs. The purpose of this method is for the algorithm to be able to “learn” by comparing its actual output with the “taught” outputs to find errors, and modify the model accordingly. Supervised learning therefore uses patterns to predict label values on additional unlabeled data.
+                    For example, with supervised learning, an algorithm may be fed data with images of sharks labeled as fish and images of oceans labeled as water. By being trained on this data, the supervised learning algorithm should be able to later identify unlabeled shark images as fish and unlabeled ocean images as water.
+                    A common use case of supervised learning is to use historical data to predict statistically likely future events. It may use historical stock market information to anticipate upcoming fluctuations, or be employed to filter out spam emails. In supervised learning, tagged photos of dogs can be used as input data to classify untagged photos of dogs.
+
+                    <h3>Unsupervised Learning</h3>
+                    In unsupervised learning, data is unlabeled, so the learning algorithm is left to find commonalities among its input data. As unlabeled data are more abundant than labeled data, machine learning methods that facilitate unsupervised learning are particularly valuable.
+                    The goal of unsupervised learning may be as straightforward as discovering hidden patterns within a dataset, but it may also have a goal of feature learning, which allows the computational machine to automatically discover the representations that are needed to classify raw data.
+                    Unsupervised learning is commonly used for transactional data. You may have a large dataset of customers and their purchases, but as a human you will likely not be able to make sense of what similar attributes can be drawn from customer profiles and their types of purchases. With this data fed into an unsupervised learning algorithm, it may be determined that women of a certain age range who buy unscented soaps are likely to be pregnant, and therefore a marketing campaign related to pregnancy and baby products can be targeted to this audience in order to increase their number of purchases.
+                    Without being told a “correct” answer, unsupervised learning methods can look at complex data that is more expansive and seemingly unrelated in order to organize it in potentially meaningful ways. Unsupervised learning is often used for anomaly detection including for fraudulent credit card purchases, and recommender systems that recommend what products to buy next. In unsupervised learning, untagged photos of dogs can be used as input data for the algorithm to find likenesses and classify dog photos together.
+                </p>
+                
+            </div>
+        </div>
+	</div>
+	
+	<!--footer-->
+    <footer class="padding mt-5">
+        <div class="container-fluid">
+            <div class="row text-left">
+                <div class="col-sm-6">
+                    <h5 class="text-uppercase">featured programms</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="../datas.html" class="nav-link">programming for data science with python</a></li>
+                        <li class="nav-item"><a href="../programming/java.html" class="nav-link">introduction to java</a></li>
+                        <li class="nav-item"><a href="../programming/cpp.html" class="nav-link">c++</a></li>
+                        <li class="nav-item"><a href="../Ai/machin.html" class="nav-link">intro to machine learning</a></li>
+                        <li class="nav-item"><a href="../programming.html#web" class="nav-link">web developement</a></li>
+                        <li class="nav-item"><a href="../ai.html" class="nav-link">introduction to AI</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm- 6 col-md-3">
+                    <h5 class="text-uppercase">company</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm- 6 col-md-3">
+                    <h5 class="text-uppercase">support</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="../contact.html" class="nav-link">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row pt-5">
+                <div class="col-8">
+                    <p>&copy;2020, ALL RIGHT RESERVED</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.facebook.com/melaku.dejene.9699"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/@melakudejene"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/MELAKUD.9335"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://t.me/M_D_21"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

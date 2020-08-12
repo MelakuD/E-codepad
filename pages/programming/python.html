@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>python</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--font awesome icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!--custom css-->
+    <link rel="stylesheet" href="../../css/program/pyt.css">
+    <!--logo-->
+    <link rel="icon" href="../../images/logo/logo.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="../../index.html"><img src="../../images/logo/logos.png" alt="" class="img-fluid"></a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#menubar" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="menubar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+					<li class="nav-item active">
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" id="dropmenu">
+								Tutorials
+							</button>
+							<div class="dropdown-menu" data-target="#dropmenu">
+								<a class="dropdown-item" href="../programming.html#html">HTML</a>
+								<a class="dropdown-item" href="../programming.html#css">CSS</a>
+								<a class="dropdown-item" href="../programming.html#js">JAVASCRIPT</a>
+								<a class="dropdown-item" href="python.html">PYTHON</a>
+								<a class="dropdown-item" href="../programming.html#java">JAVA</a>
+                                <a class="dropdown-item" href="../programming.html#cpp">C++</a>
+                                <a class="dropdown-item" href="../programming.html#php">PHP</a>
+                                <a class="dropdown-item" href="../programming.html#ruby">RUBY</a>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../../files/A_Practical_Introduction_to_Python_Programming_Heinold.pdf" download="A_Practical_Introduction_to_Python_Programming_Heinold.pdf">Download<i class="far fa-file"></i></a></li>
+				</ul>
+			</div>
+		</div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1>PYTHON</h1>
+			</div>
+			<div class="col-xs-12 col-sm-2">
+				<nav class="nav flex-column nav-tabs">
+					<a class="nav-link active" href="#introduction" data-toggle="tab">Introduction</a>
+					<a class="nav-link" href="#flowcontrol" data-toggle="tab">Flow control</a>
+					<a class="nav-link" href="#methods" data-toggle="tab">Methods</a>
+					<a class="nav-link" href="#list" data-toggle="tab">List, set, tuple & dictionary</a>
+					<a class="nav-link" href="#Object-class" data-toggle="tab">Object & class</a>
+				</nav>
+			</div>
+			<div class="col-xs-12 col-sm-10">
+				<div class="tab-content">
+					<div class="tab-pane active pr-4" id="introduction">
+						<h2>Introduction</h2>
+						<p>
+							Python is developed by Guido van Rossum. Guido van Rossum started implementing Python in 1989. Python is a very simple programming language so even if you are new to programming, you can learn python without facing any issues.
+						</p>
+						
+						<p>
+							<h4>What Can You Do with Python?</h4>
+							You may be wondering what all are the applications of Python. There are so many applications of Python, here are some of the them.
+							<br/>1. Web development – Web framework like Django and Flask are based on Python. They help you write server side code which helps you manage database, write backend programming logic, mapping urls etc.<br/>
+							2. Machine learning – There are many machine learning applications written in Python. Machine learning is a way to write a logic so that a machine can learn and solve a particular problem on its own. For example, products recommendation in websites like Amazon, Flipkart, eBay etc. is a machine learning algorithm that recognises user’s interest. Face recognition and Voice recognition in your phone is another example of machine learning<br/>
+							3. Data Analysis – Data analysis and data visualisation in form of charts can also be developed using Python.<br/>							
+							4. Scripting – Scripting is writing small programs to automate simple tasks such as sending automated response emails etc. Such type of applications can also be written in Python programming language.
+							5. Game development – You can develop games using Python.<br/>
+							6. You can develop Embedded applications in Python.<br/>
+							7. Desktop applications – You can develop desktop application in Python using library like TKinter or QT.
+						</p>
+					</div>
+					<div class="tab-pane" id="flowcontrol">
+						<h4>If statment</h4>
+						<p>
+							If statements are control flow statements which helps us to run a particular code only when a certain condition is satisfied. For example, you want to print a message on the screen only when a condition is true then you can use if statement to accomplish this in programming. In this guide, we will learn how to use if statements in Python programming with the help of examples.
+							There are other control flow statements available in Python such as if..else, if..elif..else,
+							nested if etc. However in this guide, we will only cover the if statements, other control statements are covered in separate tutorials.
+							
+						</p>
+						<pre>
+							syntax:- 
+							if condition:
+								statement
+								or
+							if condition:
+								statement
+							else:
+								statement
+								or 
+							if condition:
+								statement
+							elif condition:
+								statement
+							else:
+								statement
+						</pre>
+						<p>
+							<h4>python loop</h4>
+							A loop is a used for iterating over a set of statements repeatedly. In Python we have three types of loops for, while and do-while. In this guide, we will learn for loop and the other two loops are covered in the separate tutorials.
+						</p>
+						<pre>
+							for <variable> in <sequence>: 
+								statement
+						</pre>
+						<p> 
+							<h4>python while loop</h4>
+							While loop is used to iterate over a block of code repeatedly until a given condition returns false. In the last tutorial, we have seen for loop in Python, which is also used for the same purpose. The main difference is that we use while loop when we are not certain of the number of times the loop requires execution, on the other hand when we exactly know how many times we need to run the loop, we use for loop.
+						</p>
+						<pre>
+							while condition: 
+								statement
+						</pre>
+					</div>
+					<div class="tab-pane" id="methods">
+						<h4>Method</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna 
+							aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+							Duis aute irure dolor in reprehenderit in voluptate velit 
+							esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+							occaecat cupidatat non proident, sunt in culpa qui officia 
+							deserunt mollit anim id est laborum.
+						</p>
+					</div>
+					<div class="tab-pane" id="list">
+						<h4>List, set, tuple & dictionary</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna 
+							aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+							Duis aute irure dolor in reprehenderit in voluptate velit 
+							esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+							occaecat cupidatat non proident, sunt in culpa qui officia 
+							deserunt mollit anim id est laborum.
+						</p>
+					</div>
+					<div class="tab-pane" id="Object-class">
+						<h4>Object & class</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna 
+							aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+							Duis aute irure dolor in reprehenderit in voluptate velit 
+							esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+							occaecat cupidatat non proident, sunt in culpa qui officia 
+							deserunt mollit anim id est laborum.
+						</p>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

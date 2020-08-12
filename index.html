@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-codepad</title>
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--font awesome icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <!--custom css-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--logo-->
+    <link rel="icon" href="images/logo/logo.png">
+</head>
+<body>
+    <!--navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand"><img src="images/logo/logos.png" alt="" class="img-fluid"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarmenu">
+                <!--navbar input-->
+                <div class="input-group ml-5 mr-5 w-25">
+                    <input type="search" class="form-control" placeholder="search..">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-outline-primary"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                
+                <ul class="navbar-nav mr-5 pr-3">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Programms
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="pages/programming.html">PROGRAMMING AND DEVELOPMENT</a>
+                        <a class="dropdown-item" href="pages/ai.html">ARTIFICIAL INTELLIGENCE</a>
+                        <a class="dropdown-item" href="pages/datas.html">DATA SCIENCE</a>
+                        <a class="dropdown-item" href="pages/bussiness.html">BUSINESS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        For Enterprize
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="pages/programming.html">PROGRAMMING AND DEVELOPMENT</a>
+                        <a class="dropdown-item" href="pages/personal.html">PERSONAL DEVELOPMENT</a>
+                        <a class="dropdown-item" href="pages/datas.html">DATA SCIENCE</a>
+                        <a class="dropdown-item" href="pages/bussiness.html">BUSINESS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        For Student
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="pages/programming.html">PROGRAMMING AND DEVELOPMENT</a>
+                        <a class="dropdown-item" href="pages/ai.html">ARTIFICIAL INTELLIGENCE</a>
+                        <a class="dropdown-item" href="pages/personal.html">PERSONAL DEVELOPMENT</a>
+                        <a class="dropdown-item" href="pages/datas.html">DATA SCIENCE</a>
+                        <a class="dropdown-item" href="pages/programming.html">COMPUTER SCIENCE</a>
+                        <a class="dropdown-item" href="pages/bussiness.html">BUSINESS</a>
+                        <a class="dropdown-item" href="pages/maths.html">MATHS AND LOGICS</a>
+                    </li>
+                </ul>
+
+                <div class="pr-3">
+                    <!--modals utton-->
+                    <button id="btsign" class="btn btn-primary btn-sm text-light" data-toggle="modal" data-target="#signups">signup</button>
+                    <button id="btlog" class="btn btn-success btn-sm text-light" data-toggle="modal" data-target="#login">Login</button>
+				</div>
+            </div>
+        </div>
+    </nav>
+    <!--modal for sign up-->
+    <div class="modal fade" id="signups" tabindex="-1" aria-labelledby="signups" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Sign Up</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="First Name" id="fname" required>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Last Name" id="lname" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" id="password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="confirm Password" id="cpassword" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="send" data-dismiss="modal" aria-label="Close">Send</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--modal for log in-->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="signups" aria-hidden="true" >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Log In</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" id="lemail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" id="lpass" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="lsend" data-dismiss="modal" aria-label="Close">send</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Cloase">cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--nav-->
+    <div class="container-fluid banner">
+        <ul class="nav py-2 justify-content-center">
+            <li class="nav-item px-3"><a href="pages/programming.html">Development</a></li>
+            <li class="nav-item px-3"><a href="pages/enginering.html" target="_blank">Engineering</a></li>
+            <li class="nav-item px-3"><a href="pages/personal.html">personal Development</a></li>
+        </ul>     
+    </div>
+
+    <!--image slide-->
+	<div id="sildes" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <!--indicator-->
+		<ul class="carousel-indicators">
+			<li data-target="#slides" data-slide-to="0" class="active"></li>
+			<li data-target="#slides" data-slide-to="1"></li>
+			<li data-target="#slides" data-slide-to="2"></li>
+        </ul>
+        <!--items-->
+		<div class="carousel-inner text-center">
+			<div class="carousel-item active">
+				<img src="images/programming.jpg" class="img-fluid">
+				<div class="carousel-caption">
+					<h1 class="display-5">HOME OF TUTORIAL</h1>
+					<a href="pages/programming.html"><button type="button" class="btn btn-primary">GET STARTED</button></a>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="images/Mjc1NzQ0NQ.jpeg" class="img-fluid">
+			</div>
+			<div class="carousel-item">
+				<img src="images/Best-Programming-Languages-to-Start-Learning-Today.jpg" class="img-fluid">
+			</div>
+        </div>
+        <a class="carousel-control-prev" href="#sildes" role="button" data-slide="prev">
+            <span aria-hidden="true"><i class="fas fa-arrow-circle-left"></i></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#sildes" role="button" data-slide="next">
+            <span aria-hidden="true"><i class="fas fa-arrow-circle-right"></i></span>
+            <span class="sr-only">Next</span>
+        </a>
+	</div>
+    <hr class="my-4">
+
+    <!--welcome-->
+	<div class="container-fluid padding">
+		<div class="row padding">
+			<div class="col-12">
+				<h1 class="display-4 pb-5 learn">built from the base.</h1>
+			</div>
+			<div class="col-12 pb-5">
+				<p class="lead welpara">Welcome to e-codepad. In this platform u will get 
+					all programming courses and web devlopment with basic examples.
+					In the project section, you can get differnt type of projects on 
+					different language. Additional Enginnering projects and Business.
+				</p>
+			</div>
+		</div>
+	</div>
+    <hr class="my-4">
+    
+	<!--philo-->
+	<div class="container-fluid padding">
+		<div class="row philo">
+			<div class="col-xs-12 col-sm-6">
+				<h3>Our Philosophy</h3>
+				<p class="lead philopara">“Never underestimate the power of dreams and the
+					 influence of the human spirit. We are all the 
+					 same in this notion: The potential for greatness 
+					 lives within each of us.” —Wilma Rudolph
+				</p>
+				<p class="philopara">Every success comes from a great curiosity
+					and hard work. in this day technology become 
+					great and advanced so to walk with this new technology
+					era couriosity most powerful
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<img src="images/images.jpg" class="img-fluid">
+			</div>
+		</div>
+    </div>
+
+    <!--course-->
+    <div class="container-fluid padding mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-uppercase cours">top course on web Development</h2>
+            </div>
+        </div>
+    </div>
+    
+    <!--front end-->
+    <div class="container-fluid padding">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-uppercase black">front end web devlopment</h3>
+                <p class="lead text-dark">Front-end web development is the practice of converting data to a graphical interface, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that data.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding d-flex align-item-center">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!--html-->
+                <div class="card cards">
+                    <img src="images/html.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/html.html"><i class="fas fa-code"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!--css-->
+                <div class="card cards">
+                    <img src="images/css.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/csss.html"><i class="fab fa-css3"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!--js-->
+                <div class="card cards">
+                    <img src="images/js.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/javas.html"><i class="fab fa-js"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="card cards">
+                     <!--bootstrap-->
+                    <img src="images/bootstrap.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/csss.html#boot"><i class="fas fa-bold"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--back end-->
+    <div class="container-fluid padding">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-uppercase black">back end web devlopment</h3>
+                <p class="lead text-dark">
+                    Backend development (also stylized as back-end or back end development) is the skill that powers the web. Yet it does it modestly, without fanfare—allowing people to browse their favorite sites without even knowing about all the work put in by the backend developer or team.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding d-flex align-item-center">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!--php-->
+                <div class="card cards">
+                    <img src="images/php.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/phps.html"><i class="fab fa-php"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                 <!--python-->
+                <div class="card cards">
+                    <img src="images/python.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/python.html"><i class="fab fa-python"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!--java-->
+                <div class="card cards">
+                    <img src="images/java.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/java.html"><i class="fab fa-java"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                 <!--ruby-->
+                <div class="card cards">
+                    <img src="images/ruby.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/rubys.html"><i class="fas fa-gem"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--programming-->
+    <div class="container-fluid padding">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-uppercase black">top programming language</h2>
+                <p class="lead text-dark">
+                    A programming language is a vocabulary and set of grammatical rules for instructing a computer or computing device to perform specific tasks. The term programming language usually refers to high-level languages, such as BASIC, C, C++, COBOL, Java, FORTRAN, Ada, Pascal, python,...
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding d-flex align-item-center">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!--python-->
+                <div class="card cards">
+                    <img src="images/python.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/python.html"><i class="fab fa-python"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!--java-->
+                <div class="card cards">
+                    <img src="images/java.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/java.html"><i class="fab fa-java"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!--cpp-->
+                <div class="card cards">
+                    <img src="images/cpp.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/cpp.html"><i class="fab fa-cuttlefish"></i><sup><i class="fas fa-plus"></i><i class="fas fa-plus"></i></sup></a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <!--c-->
+                <div class="card cards">
+                    <img src="images/c.jpg" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/c.html"><i class="fab fa-cuttlefish"></i></a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Ai-->
+    <div class="container-fluid padding">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-uppercase black">ARTIFICIAL INTELLIGENCE</h2>
+                <p class="lead text-dark">
+                    Artificial intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions. The term may also be applied to any machine that exhibits traits associated with a human mind such as learning and problem-solving.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding d-flex align-item-center">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="card cards">
+                    <img src="images/deeplearning.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/Ai/deep.html">deep learning</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="card cards">
+                    <img src="images/machin.jpg" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/Ai/machin.html">machine learning</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="card cards">
+                    <img src="images/python.png" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/programming/python.html">PYTHON</a></h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="card cards">
+                    <img src="images/compvis.jpg" class="card-img-top">
+                    <div class="card-body bodies">
+                        <h4 class="card-title text-center"><a href="pages/Ai/computer.html">computer vision</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--some info-->
+    <div class="container-fluid black padding">
+        <div class="row text-center">
+            <div class="col-12">
+                <h3>Don't west your time!</h3>
+                <p class="pb-5 black">E-codepad has all important course for free</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row text-center showed">
+            <div class="col-xs-12 col-sm-3">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="text-uppercase">get real skiils</h4>
+                        <p>
+                            Our quality curriculum is designed with top-tier industry partners, not academics, so you learn the high-impact skills that top companies want. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div class="card">
+                    <div class="card-header bg-warning">
+                        <i class="far fa-lightbulb"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="text-uppercase">project based</h4>
+                        <p>
+                            Learn by doing with real-world projects and other hands-on exercises that lead to real skills mastery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div class="card">
+                    <div class="card-header bg-success">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="text-uppercase">scheduled</h4>
+                        <p>
+                            Self-paced learning - whenever and wherever you want. Graduate while learning part-time for 10 hrs/week.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <div class="card">
+                    <div class="card-header bg-info">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="text-uppercase">the help you need</h4>
+                        <p>
+                            Reach out to our mentors 24/7 and have your coding questions answered quickly so you can keep learning.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer class="padding mt-5">
+        <div class="container-fluid">
+            <div class="row text-left">
+                <div class="col-sm-6">
+                    <h5 class="text-uppercase">featured programms</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="pages/datas.html" class="nav-link">programming for data science with python</a></li>
+                        <li class="nav-item"><a href="pages/programming/java.html" class="nav-link">introduction to java</a></li>
+                        <li class="nav-item"><a href="pages/programming/cpp.html" class="nav-link">c++</a></li>
+                        <li class="nav-item"><a href="pages/Ai/machin.html" class="nav-link">intro to machine learning</a></li>
+                        <li class="nav-item"><a href="pages/programming.html#web" class="nav-link">web developement</a></li>
+                        <li class="nav-item"><a href="pages/ai.html" class="nav-link">introduction to AI</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm- 6 col-md-3">
+                    <h5 class="text-uppercase">company</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="pages/about.html" target="_blank" class="nav-link">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm- 6 col-md-3">
+                    <h5 class="text-uppercase">support</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="pages/contact.html" class="nav-link">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row pt-5">
+                <div class="col-8">
+                    <p>&copy;2020, ALL RIGHT RESERVED</p>
+                </div>
+                <div class="col-4">
+                    <a href="https://www.facebook.com/melaku.dejene.9699"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/@melakudejene"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/MELAKUD.9335"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://t.me/M_D_21"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

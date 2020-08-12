@@ -1,0 +1,581 @@
+C++ Variables, Literals and Constants
+
+C++ Variables
+
+In programming, a variable is a container (storage area) to hold data.
+To indicate the storage area, each variable should be given a unique name (identifier).<br/> For example,
+int age = 14;<br/>
+Here, age is a variable of the int data type, and we have assigned an integer value 14 to it.
+Note: The int data type suggests that the variable can only hold integers. Similarly, we can use the double data type if we have to store decimals and exponentials.
+We will learn about all the data types in detail in the next tutorial.
+The value of a variable can be changed, hence the name variable.
+int age = 14;   // age is 14
+age = 17;       // age is 17
+Rules for naming a variable
+A variable name can only have alphabets, numbers and the underscore _.
+A variable name cannot begin with a number.
+Variable names cannot begin with an uppercase character.
+A variable name cannot be a keyword. For example, int is a keyword that is used to denote integers.
+A variable name can start with an underscore. However, it's not considered a good practice.
+Note: We should try to give meaningful names to variables. For example, first_name is a better variable name than fn
+
+C++ Literals
+
+Literals are data used for representing fixed values. They can be used directly in the code. For example: 1, 2.5, 'c' etc.
+Here, 1, 2.5 and 'c' are literals. Why? You cannot assign different values to these terms.							
+Here's a list of different literals in C++ programming.
+
+1. Integers
+
+An integer is a numeric literal(associated with numbers) without any fractional or exponential part. There are three types of integer literals in C programming:
+
+decimal (base 10)
+octal (base 8)
+hexadecimal (base 16)
+For example:
+
+Decimal: 0, -9, 22 etc
+Octal: 021, 077, 033 etc
+Hexadecimal: 0x7f, 0x2a, 0x521 etc
+In C++ programming, octal starts with a 0, and hexadecimal starts with a 0x.
+
+2. Floating-point Literals
+
+A floating-point literal is a numeric literal that has either a fractional form or an exponent form. For example:
+-2.0
+0.0000234
+-0.22E-5
+Note: E-5 = 10-5
+
+3. Characters
+A character literal is created by enclosing a single character inside single quotation marks. For example: 'a', 'm', 'F', '2', '}' etc.
+
+
+C++ Constants
+In C++, we can create variables whose value cannot be changed. For that, we use the const keyword. Here's an example:
+const int LIGHT_SPEED = 299792458;
+LIGHT_SPEED = 2500 // Error! LIGHT_SPEED is a constant.
+Here, we have used the keyword const to declare a constant named LIGHT_SPEED. If we try to change the value of LIGHT_SPEED, we will get an error.
+A constant can also be created using the #define preprocessor directive. We will learn about it in detail in the C++ Macros tutorial.
+
+C++ Data Types
+
+In C++, data types are declarations for variables. This determines the type and size of data associated with variables. For example,
+int age = 13;
+Here, age is a variable of type int. Meaning, the variable can only store integers of either 2 or 4 bytes.
+
+C++ flow control
+
+C++ if, if...else and Nested if...else
+In this article, you will learn to create decision making statements in a C++ program using different forms of if..else statement.
+There are three forms of if...else statements in C++.
+
+1. if statement
+    if(condition){
+        statement;
+    }
+2. if...else statement
+    if(condition){
+            statement;
+        }
+    else{
+        statement;
+    }
+3. if...else if...else statement
+    if(condition){
+            statement;
+        }
+    else if{
+        statement;
+    }
+    else{
+        statement;
+    }
+
+
+c++ loop
+In computer programming, loops are used to repeat a block of code.
+For example, let's say we want to show a message 100 times. Then instead of writing the print statement 100 times, we can use a loop.
+That was just a simple example; we can achieve much more efficiency and sophistication in our programs by making effective use of loops.
+There are 3 types of loops in C++.
+
+for loop
+    for(initialization; condition; update){
+        statement;
+    }
+while loop
+    initialization
+    while(condition){
+        statement;
+        update;
+    }
+do...while loop
+    initialization
+    do{
+        statement
+        update
+    }while(condition);
+
+C++ Functions
+A function is a block of code that performs a specific task. Suppose we need to create a program to create a circle and color it. We can create two functions to solve this problem:
+-a function to draw the circle
+-a function to color the circle
+Dividing a complex problem into smaller chunks makes our program easy to understand and reusable.
+There are two types of function:
+
+Standard Library Functions: Predefined in C++ User-defined Function: Created by users In this tutorial, we will focus mostly on user-defined functions.
+C++ User-defined Function C++ allows the programmer to define their own function. A user-defined function groups code to perform a specific task and that group of code is given a name (identifier). When the function is invoked from any part of the program, it all executes the codes defined in the body of the function. C++ Function Declaration The syntax to declare a function is:
+returnType functionName (parameter1, parameter2,...) {
+// function body   
+}
+							
+Here's an example of a function declaration.
+// function declaration
+void greet() {
+cout << "Hello World";
+}
+							
+Here,
+-the name of the function is greet()
+-the return type of the function is void
+-the empty parentheses mean it doesn't have any parameters
+-the function body is written inside {}
+Note: We will learn about returnType and parameters later in this tutorial. Calling a Function In the above program, we have declared a function named greet(). To use the greet() function, we need to call it. Here's how we can call the above greet() function.
+							int main() {
+								
+								// calling a function   
+								greet(); 
+
+							}
+							
+Function Parameters As mentioned above, a function can be declared with parameters (arguments). A parameter is a value that is passed when declaring a function. For example, let us consider the function below:
+void printNum(int num) {
+    cout << num;
+}
+Here, the int variable num is the function parameter. We pass a value to the function parameter while calling the function.
+int main() {
+    int n = 7;
+    
+    // calling the function
+    // n is passed to the function as argument
+    printNum(n);
+    
+    return 0;
+}
+Example 2: Function with Parameters
+// program to print a text
+
+#include 
+using namespace std;
+
+// display a number
+void displayNum(int n1, float n2) {
+    cout << "The int number is " << n1;
+    cout << "The double number is " << n2;
+}
+
+int main() {
+     
+     int num1 = 5;
+     double num2 = 5.5;
+
+    // calling the function
+    displayNum(num1, num2);
+
+    return 0;
+}
+Run Code Output
+The int number is 5
+The double number is 5.5
+In the above program, we have used a function that has one int parameter and one double parameter. We then pass num1 and num2 as arguments. These values are stored by the function parameters n1 and n2 respectively. C++ function with parameters Note: The type of the arguments passed while calling the function must match with the corresponding parameters defined in the function declaration. Return Statement In the above programs, we have used void in the function declaration. For example,
+void displayNumber() {
+    // code
+}
+This means the function is not returning any value. It's also possible to return a value from a function. For this, we need to specify the returnType of the function during function declaration. Then, the return statement can be used to return a value from a function. For example,
+int add (int a, int b) {
+   return (a + b);
+}
+Here, we have the data type int instead of void. This means that the function returns an int value. The code return (a + b); returns the sum of the two parameters as the function value. The return statement denotes that the function has ended. Any code after return inside the function is not executed.
+
+C++ Arrays
+In this tutorial, we will learn to work with arrays. We will learn to declare, initialize, and access array elements in C++ programming with the help of examples.
+In C++, an array is a variable that can store multiple values of the same type. For example,
+Suppose a class has 27 students, and we need to store the grades of all of them. Instead of creating 27 separate variables, we can simply create an array:
+double grade[27];
+Here, grade is an array that can hold a maximum of 27 elements of double type.
+In C++, the size and type of arrays cannot be changed after its declaration.
+
+C++ Array Declaration
+dataType arrayName[arraySize];
+For example,
+int x[6];
+Here,
+* int - type of element to be stored
+* x - name of the array
+* 6 - size of the array
+
+Access Elements in C++ Array
+In C++, each element in an array is associated with a number. The number is known as an array index. We can access elements of an array by using those indices.
+// syntax to access array elements
+array[index];
+Consider the array x we have seen above.
+Elements of an array in C++
+Few Things to Remember:
+* The array indices start with 0. Meaning x[0] is the first element stored at index 0.
+* If the size of an array is n, the last element is stored at index (n-1). In this example, x[5] is the last element.
+* Elements of an array have consecutive addresses. For example, suppose the starting address of x[0] is 2120d. Then, the address of the next element x[1] will be 2124d, the address of x[2] will be 2128d and so on.
+
+Here, the size of each element is increased by 4. This is because the size of int is 4 bytes.
+
+C++ Array Initialization
+In C++, it's possible to initialize an array during declaration. For example,
+// declare and initialize and array
+int x[6] = {19, 10, 8, 17, 9, 15};
+C++ Array elements and their data
+Another method to initialize array during declaration:
+// declare and initialize an array
+int x[] = {19, 10, 8, 17, 9, 15};
+Here, we have not mentioned the size of the array. In such cases, the compiler automatically computes the size.
+
+C++ Array With Empty Members
+In C++, if an array has a size n, we can store upto n number of elements in the array. However, what will happen if we store less than n number of elements.
+For example,
+// store only 3 elements in the array
+int x[6] = {19, 10, 8};
+Here, the array x has a size of 6. However, we have initialized it with only 3 elements.
+In such cases, the compiler assigns random values to the remaining places. Oftentimes, this random value is simply 0.
+Empty array members are automatically assigned the value 0
+
+How to insert and print array elements?
+int mark[5] = {19, 10, 8, 17, 9}
+
+// change 4th element to 9
+mark[3] = 9;
+
+// take input from the user
+// store the value at third position
+cin >> mark[2];
+
+
+// take input from the user
+// insert at ith position
+cin >> mark[i-1];
+
+// print first element of the array
+cout << mark[0];
+
+// print ith element of the array
+cout >> mark[i-1];
+
+Example 1: Displaying Array Elements
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[5] = {7, 5, 6, 12, 35};
+
+    cout << "The numbers are: ";
+
+    //  Printing array elements
+    // using range based for loop
+    for (const int &n : numbers) {
+        cout << n << "  ";
+    }
+
+
+    cout << "\nThe numbers are: ";
+
+    //  Printing array elements
+    // using traditional for loop
+    for (int i = 0; i < 5; ++i) {
+        cout << numbers[i] << "  ";
+    }
+
+    return 0;
+}
+Run Code
+Output
+The numbers are: 7  5  6  12  35
+The numbers are: 7  5  6  12  35
+Here, we have used a for loop to iterate from i = 0 to i = 4. In each iteration, we have printed numbers[i].
+We again used a range based for loop to print out the elements of the array. To learn more about this loop, check C++ Ranged for Loop.
+Note: In our range based loop, we have used the code const int &n instead of int n as the range declaration. However, the const int &n is more preferred because:
+1. Using int n simply copies the array elements to the variable n during each iteration. This is not memory-efficient.
+
+&n, however, uses the memory address of the array elements to access their data without copying them to a new variable. This is memory-efficient.
+2. We are simply printing the array elements, not modifying them. Therefore, we use const so as not to accidentally change the values of the array.
+
+Example 2: Take Inputs from User and Store Them in an Array
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[5];
+
+    cout << "Enter 5 numbers: " << endl;
+
+    //  store input from user to array
+    for (int i = 0; i < 5; ++i) {
+        cin >> numbers[i];
+    }
+
+    cout << "The numbers are: ";
+
+    //  print array elements
+    for (int n = 0; n < 5; ++n) {
+        cout << numbers[n] << "  ";
+    }
+
+    return 0;
+}
+Run Code
+Output
+Enter 5 numbers: 
+11
+12
+13
+14
+15
+The numbers are: 11  12  13  14  15
+Once again, we have used a for loop to iterate from i = 0 to i = 4. In each iteration, we took an input from the user and stored it in numbers[i].
+Then, we used another for loop to print all the array elements.
+
+Example 3: Display Sum and Average of Array Elements Using for Loop
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    // initialize an array without specifying size
+    double numbers[] = {7, 5, 6, 12, 35, 27};
+
+    double sum = 0;
+    double count = 0;
+    double average;
+
+    cout << "The numbers are: ";
+
+    //  print array elements
+    // use of range-based for loop
+    for (const double &n : numbers) {
+        cout << n << "  ";
+
+        //  calculate the sum
+        sum += n;
+
+        // count the no. of array elements
+        ++count;
+    }
+
+    // print the sum
+    cout << "\nTheir Sum = " << sum << endl;
+
+    // find the average
+    average = sum / count;
+    cout << "Their Average = " << average << endl;
+
+    return 0;
+}
+Run Code
+Output
+The numbers are: 7  5  6  12  35  27
+Their Sum = 92
+Their Average = 15.3333
+In this program:
+1. We have initialized a double array named numbers but without specifying its size. We also declared three double variables sum, count, and average.
+
+Here, sum =0 and count = 0.
+2. Then we used a range based for loop to print the array elements. In each iteration of the loop, we add the current array element to sum.
+3. We also increase the value of count by 1 in each iteration, so that we can get the size of the array by the end of the for loop.
+4. After printing all the elements, we print the sum and the average of all the numbers. The average of the numbers is given by average = sum / count;
+Note: We used a ranged for loop instead of a normal for loop.
+A normal for loop requires us to specify the number of iterations, which is given by the size of the array.
+But a ranged for loop does not require such specifications.
+
+C++ Array Out of Bounds
+If we declare an array of size 10, then the array will contain elements from index 0 to 9.
+However, if we try to access the element at index 10 or more than 10, it will result in Undefined Behaviour.
+C++ Structures
+In this article, you'll learn about structures in C++ programming; what is it, how to define it and use it in your program.
+Structure is a collection of variables of different data types under a single name. It is similar to a class in that, both holds a collecion of data of different data types.
+For example: You want to store some information about a person: his/her name, citizenship number and salary. You can easily create different variables name, citNo, salary to store these information separately.
+However, in the future, you would want to store information about multiple persons. Now, you'd need to create different variables for each information per person: name1, citNo1, salary1, name2, citNo2, salary2
+You can easily visualize how big and messy the code would look. Also, since no relation between the variables (information) would exist, it's going to be a daunting task.
+A better approach will be to have a collection of all related information under a single name Person, and use it for every person. Now, the code looks much cleaner, readable and efficient as well.
+This collection of all related information under a single name Person is a structure.
+
+How to declare a structure in C++ programming?
+The struct keyword defines a structure type followed by an identifier (name of the structure).
+Then inside the curly braces, you can declare one or more members (declare variables inside curly braces) of that structure. For example:
+struct Person
+{
+    char name[50];
+    int age;
+    float salary;
+};
+C++ Classes and Objects
+In this tutorial, we will learn about objects and classes and how to use them in C++ with the help of examples.
+In previous tutorials, we learned about functions and variables. Sometimes it's desirable to put related functions and data in one place so that it's logical and easier to work with.
+Suppose, we need to store the length, breadth, and height of a rectangular room and calculate its area and volume.
+To handle this task, we can create three variables, say, length, breadth, and height along with the functions calculateArea() and calculateVolume().
+However, in C++, rather than creating separate variables and functions, we can also wrap these related data and functions in a single place (by creating objects). This programming paradigm is known as object-oriented programming.
+
+But before we can create objects and use them in C++, we first need to learn about classes.
+
+C++ Class
+A class is a blueprint for the object.
+
+We can think of a class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.
+Create a Class
+A class is defined in C++ using keyword class followed by the name of the class.
+The body of the class is defined inside the curly brackets and terminated by a semicolon at the end.
+class className {
+   // some data
+   // some functions
+};
+For example,
+class Room {
+    public:
+        double length;
+        double breadth;
+        double height;   
+
+        double calculateArea(){   
+            return length * breadth;
+        }
+
+        double calculateVolume(){   
+            return length * breadth * height;
+        }
+
+};
+Here, we defined a class named Room.
+The variables length, breadth, and height declared inside the class are known as data members. And, the functions calculateArea() and calculateVolume() are known as member functions of a class.
+
+C++ Objects
+When a class is defined, only the specification for the object is defined; no memory or storage is allocated.
+To use the data and access functions defined in the class, we need to create objects.
+
+Syntax to Define Object in C++
+className objectVariableName;
+We can create objects of Room class (defined in the above example) as follows:
+// sample function
+void sampleFunction() {
+    // create objects
+    Room room1, room2;
+}
+
+int main(){
+    // create objects 
+    Room room3, room4;
+}
+Here, two objects room1 and room2 of the Room class are created in sampleFunction(). Similarly, the objects room3 and room4 are created in main().
+As we can see, we can create objects of a class in any function of the program. We can also create objects of a class within the class itself, or in other classes.
+Also, we can create as many objects as we want from a single class.
+C++ Pointers
+In this tutorial, we will learn about pointers in C++ and their working with the help of examples.
+In C++, pointers are variables that store the memory addresses of other variables.
+Address in C++
+If we have a variable var in our program, &var will give us its address in the memory. For example,
+Example 1: Printing Variable Addresses in C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // declare variables
+    int var1 = 3;
+    int var2 = 24;
+    int var3 = 17;
+
+    // print address of var1
+    cout << "Address of var1: "<< &var1 << endl;
+
+    // print address of var2
+    cout << "Address of var2: " << &var2 << endl;
+
+    // print address of var3
+    cout << "Address of var3: " << &var3 << endl;
+}
+Run Code
+Output
+Address of var1: 0x7fff5fbff8ac
+Address of var2: 0x7fff5fbff8a8
+Address of var3: 0x7fff5fbff8a4
+Here, 0x at the beginning represents the address is in the hexadecimal form.
+Notice that the first address differs from the second by 4 bytes and the second address differs from the third by 4 bytes.
+This is because the size of an int variable is 4 bytes in a 64-bit system.
+Note: You may not get the same results when you run the program.
+
+C++ Pointers
+As mentioned above, pointers are used to store addresses rather than values.
+Here is how we can declare pointers.
+int *pointVar;
+Here, we have declared a pointer pointVar of the int type.
+We can also declare pointers in the following way.
+int* pointVar; // preferred syntax
+Let's take another example of declaring pointers.
+int* pointVar, p;
+Here, we have declared a pointer pointVar and a normal variable p.
+
+Note: The * operator is used after the data type to declare pointers.
+
+Assigning Addresses to Pointers
+Here is how we can assign addresses to pointers:
+int* pointVar, var;
+var = 5;
+
+// assign address of var to pointVar pointer
+pointVar = &var;
+Here, 5 is assigned to the variable var. And, the address of var is assigned to the pointVar pointer with the code pointVar = &var.
+
+Get the Value from the Address Using Pointers
+To get the value pointed by a pointer, we use the * operator. For example:
+int* pointVar, var;
+var = 5;
+
+// assign address of var to pointVar
+pointVar = &var;
+
+// access value pointed by pointVar
+cout << *pointVar << endl;   // Output: 5
+
+In the above code, the address of var is assigned to the pointVar pointer. We have used the *pointVar to get the value stored in that address.
+When * is used with pointers, it's called the dereference operator. It operates on a pointer and gives the value pointed by the address stored in the pointer. That is, *pointVar = var.
+Note: In C++, pointVar and *pointVar is completely different. We cannot do something like *pointVar = &var;
+
+Example 2: Working of C++ Pointers
+#include <iostream>
+using namespace std;
+int main() {
+    int var = 5;
+
+    // declare pointer variable
+    int* pointVar;
+
+    // store address of var
+    pointVar = &var;
+
+    // print value of var
+    cout << "var = " << var << endl;
+
+    // print address of var
+    cout << "Address of var (&var) = " << &var << endl
+         << endl;
+
+    // print pointer pointVar
+    cout << "pointVar = " << pointVar << endl;
+
+    // print the content of the address pointVar points to
+    cout << "Content of the address pointed to by pointVar (*pointVar) = " << *pointVar << endl;
+    
+    return 0;
+}
+Run Code
+Output
+var = 5
+Address of var (&var) = 0x61ff08
+
+pointVar = 0x61ff08
+Content of the address pointed to by pointVar (*pointVar) = 5
+
