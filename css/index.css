@@ -237,9 +237,7 @@ footer h5, p{
 		font-size: 1.1rem !important;
 		font-weight: bold;
     }
-    .fa-search{
-        font-size: 10px;
-    }
+    
 }
 @media(max-width:768px){
 	.carousel-caption h1{
@@ -257,20 +255,7 @@ footer h5, p{
 	.card{
 		margin-bottom: 12px;
     }
-    .input-group{
-        margin-right: 10px;
-    }
-    .input-group input{
-        width: 25px;
-        height: 10px;
-    }
-    .fa-search{
-        font-size: 5px;
-    }
-    .input-group button{
-        width: 5px;
-        height: 10px;
-    }
+    
 }
 @media(max-width:576px){
 	.container-fluid .row ul li{
@@ -304,18 +289,5 @@ footer h5, p{
 		padding: 0.3rem 0.6rem;
 		border-radius: 13px;
     }
-    .input-group{
-        margin-right: 10px;
-    }
-    .input-group input{
-        width: 25px;
-        height: 10px;
-    }
-    .fa-search{
-        font-size: 5px;
-    }
-    .input-group button{
-        width: 5px;
-        height: 10px;
-    }
+    
 }
